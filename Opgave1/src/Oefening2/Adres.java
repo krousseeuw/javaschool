@@ -76,7 +76,7 @@ public class Adres {
 	}
 	
 	public String toString() {
-		return straatnaam + " " + huisnummer + ((bus==null) ? "" : "bus " + bus) + "\n" + 
+		return straatnaam + " " + huisnummer + " " + ((bus==null) ? "" : "bus " + bus) + "\n" + 
 	postcode + " " + woonplaats;
 	}
 	
@@ -97,6 +97,9 @@ public class Adres {
 		
 		Adres adreswithoutcorrectcon = new Adres("Lolbaan", 1, "i", 12, "Bestanistan");
 		
-		// COMPLETGE IT
+		System.out.println(adreswithoutcon);
+		System.out.println(adreswithcorrectcon);
+		System.out.println(adreswithcorrectcon2);
+		System.out.println(adreswithoutcorrectcon);
 	}
 }
