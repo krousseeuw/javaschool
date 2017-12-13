@@ -1,4 +1,4 @@
-package Oefening2;
+package opgave1.Oefening2;
 
 import java.awt.Window.Type;
 

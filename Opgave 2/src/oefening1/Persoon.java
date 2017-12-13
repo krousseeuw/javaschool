@@ -2,7 +2,7 @@ package oefening1;
 
 import java.util.jar.Attributes.Name;
 
-import Oefening2.Adres;
+import opgave1.Oefening2.Adres;
 
 public class Persoon {
 	private String voornaam;
@@ -89,5 +89,6 @@ public class Persoon {
 		System.out.println(persoon1.toString() + " is gelijk aan " + persoon3.toString() + ": " + persoon1.equals(persoon3));
 		System.out.println(persoon1.toString() + " is gelijk aan " + persoon2.toString() + ": " + persoon1.equals(persoon2));
 		System.out.println(persoon2.toString() + " is gelijk aan " + persoon4.toString() + ": " + persoon2.equals(persoon4));
+		System.out.println("Aantal personen: " + Persoon.getAantalGemaaktePersonen());
 	}
 }
