@@ -1,5 +1,5 @@
 package oefening1;
 
-public class Spons {
-
+public abstract class Spons extends Ongewervelden implements IWaterdier {
+	
 }

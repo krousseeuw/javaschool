@@ -1,11 +1,9 @@
 package oefening1;
 
-public class Vis extends Gewervelden {
+public abstract class Vis extends Gewervelden implements IWaterdier {
 	private int aantalVinnen;		
 	
-	@Override
-	public String maakGeluid() {
-		return geluid;
-	}
-
+	public abstract void setAantalVinnen(int aantalVinnen);
+	
+	public abstract int getAantalVinnen();
 }

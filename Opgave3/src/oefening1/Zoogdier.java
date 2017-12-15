@@ -2,7 +2,7 @@ package oefening1;
 
 import javax.print.attribute.standard.RequestingUserName;
 
-public class Zoogdier extends Gewervelden{
+public abstract class Zoogdier extends Gewervelden{
 	private int zwangerschap;
 		
 	@Override
