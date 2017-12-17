@@ -4,6 +4,12 @@ public abstract class Gewervelden extends Dier {
 	public Gewervelden() {
 		super();
 	}
+	
+	/**
+	 * @param naam
+	 * @param lengte
+	 * @param type
+	 */
 	public Gewervelden(String naam, int lengte, HuidType type) {
 		super(naam);
 		this.lengte = lengte;
