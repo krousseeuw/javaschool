@@ -1,5 +1,7 @@
 package oefening1;
 
+import javax.management.loading.PrivateClassLoader;
+import javax.xml.crypto.dsig.SignatureProperties;
 
 public abstract class Ongewervelden extends Dier {
 	
