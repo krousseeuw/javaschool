@@ -1,8 +1,8 @@
-package oefening1;
+package opgave2.oefening1;
 
 import java.util.jar.Attributes.Name;
 
-import opgave1.Oefening2.Adres;
+import opgave1.oefening2.Adres;
 
 public class Persoon {
 	private String voornaam;
