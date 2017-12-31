@@ -99,4 +99,8 @@ public class Klant implements Comparable<Klant>, Serializable {
 			return false;
 		return true;			
 	}
+	
+	public static void main(String[] args) {
+		//TODO: Tests
+	}
 }
