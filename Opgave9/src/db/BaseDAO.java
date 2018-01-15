@@ -5,8 +5,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class BaseDAO {
+public abstract class BaseDAO {
 	private Connection connection;
+	protected final String defaultErrorMessage = "error unexpected";
+
 	
 	public Connection getConnection() {
 		return connection;
@@ -26,17 +28,14 @@ public class BaseDAO {
 		}
 	}
 	
-	protected void closeConnections(PreparedStatement ps, ResultSet rs) throws SQLException{
-		if(ps!=null)
-			ps.close();
-		if(rs!=null)
+	/**
+	 * 
+	 * @param ResultSet rs
+	 * @throws SQLException
+	 */
+	public void closeConnection(ResultSet rs) throws SQLException {
+		if(rs!=null) {
 			rs.close();
-	}
-	
-	protected void closeConnections(PreparedStatement ps) throws SQLException {
-		if(ps!=null)
-			ps.close();
+		}
 	}
 }
-
-
