@@ -31,7 +31,7 @@ public class DatabaseSingleton {
 		if(connection==null||connection.isClosed()) {
 			try {
 				connection = DriverManager.getConnection(
-						"jdbc:mysql://localhost:3306/bibliotheek_ehb?verifyServerCertificate=false&useSSL=true", 
+						"jdbc:mysql://localhost:3306/cinema_ehb?verifyServerCertificate=false&useSSL=true", 
 						DatabaseProperties.USERNAME, 
 						DatabaseProperties.PASSWORD);
 			} catch (SQLException ex) {
