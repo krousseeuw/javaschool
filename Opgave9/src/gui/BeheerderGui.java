@@ -21,6 +21,7 @@ import javax.swing.event.ChangeListener;
 
 import db.FilmDAO;
 import db.ReservatieDAO;
+import db.ZaalDAO;
 import entity.FilmForCombobox;
 import entity.FilmVO;
 import entity.ReservatieVO;
@@ -188,20 +189,49 @@ public class BeheerderGui {
 	}
 	
 	public JComboBox<FilmForCombobox> getFilms() {
+		if(films == null) {
+			films = new JComboBox<FilmForCombobox>();
+			refreshFilms();
+		}
+		
 		return films;
 	}
 	
 	public JComboBox<ZaalVO> getZalen() {
+		if(zalen == null) {
+			zalen = new JComboBox<ZaalVO>();
+			refreshZalen();
+		}
+		
 		return zalen;
 	}
 	
+	private void refreshZalen() {
+		// TODO Auto-generated method stub
+		zalen.removeAllItems();
+		ZaalDAO dao = new ZaalDAO();
+		
+		for(ZaalVO item:dao.selectAll()) {
+			zalen.addItem(item);
+		}
+	}
+
 	protected void refreshFilms() {
 		// TODO Auto-generated method stub
+		films.removeAllItems();
+		FilmDAO dao = new FilmDAO();
 		
+		for(FilmVO item:dao.selectAll()) {
+			films.addItem(new FilmForCombobox(item));
+		}
 	}
 	
 	public void clearFields() {
-		// TODO Auto-generated method stub
-		
+		duur.setText("");
+		titel.setText("");
+	}
+	
+	public static void main(String[] args) {
+		new BeheerderGui();
 	}
 }
