@@ -33,14 +33,14 @@ public class VideoApp extends JFrame {
 	
 	private void initialize() {
 		this.setSize(300,200);
-		this.setContentPane(getJContentPane());
+		this.setContentPane(getjContentPane());
 		this.setTitle("Videotheek");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setVisible(true);
 	}
 	
 	public JPanel getjContentPane() {
-		this(jContentPane == null){
+		if(jContentPane == null){
 			jContentPane = new JPanel();
 			jContentPane.setLayout(new BorderLayout());
 			jContentPane.add(getjComboBox(), BorderLayout.NORTH);
