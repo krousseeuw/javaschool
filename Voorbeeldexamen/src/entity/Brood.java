@@ -1,5 +1,5 @@
 package entity;
 
-public abstract class Brood {
+public abstract class Brood extends Product {
 
 }

@@ -1,5 +1,7 @@
 package entity;
 
-public abstract class Patisserie {
+public abstract class Patisserie extends Product {
+	
+	
 
 }

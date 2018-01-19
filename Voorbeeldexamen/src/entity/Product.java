@@ -1,9 +1,9 @@
 package entity;
 
-public abstract class Product {
+public abstract class Product implements Comparable<Product> {
 	private int id;
 	private String naam;
-	private double prijs;
+	private Double prijs;
 	
 	public String getNaam() {
 		return naam;
@@ -13,7 +13,7 @@ public abstract class Product {
 		this.naam = naam;
 	}
 	
-	public double getPrijs() {
+	public Double getPrijs() {
 		return prijs;
 	}
 	
@@ -25,4 +25,11 @@ public abstract class Product {
 		return id;
 	}
 
+	public abstract void geefProductbeschrijving();
+	
+	@Override
+	public int compareTo(Product o) {
+		// TODO Auto-generated method stub
+		return this.naam.compareTo(o.getNaam());
+	}
 }
